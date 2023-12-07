@@ -50,9 +50,12 @@ public class Contrato {
 		return parcelas;
 	}
 	
-	public void mostrarParcela() {
+	public void apresentarDados() {
+		double valorTotal = 0;
 		for (Parcela parcela : parcelas) {
 			System.out.println(parcela.getDataParcela().format(formatter) + " - " + parcela.getValorParcela());
+			valorTotal += parcela.getValorParcela();
 		}
+		System.out.println("Valor total pago: " + valorTotal);
 	}
 }

@@ -31,7 +31,9 @@ public class Principal {
 		ServicoContrato servico = new ServicoContrato(new ServicoPayPal());
 		servico.processarContrato(contrato, numeroParcelas);
 		
-		contrato.mostrarParcela();
+		System.out.println("Parcelas:");
+		
+		contrato.apresentarDados();
 		
 		sc.close();
 	}
